@@ -1,0 +1,16 @@
+#include <iostream>
+using namesapce std;
+int main() {
+    int prefix[10] = {}; prefix[0]=0
+    int size = 10;
+    char pattern[10]={'B','C','A','B','A','B','A','B','A','C'}; 
+    int i=0;
+    for (int j=1 ; j<size ; j++) {
+         while (i>0 && pattern[i] != pattern[j]) {i=pattern[i];}
+         if (pattern[i] == pattern[j]) {i++}
+         pattern[j]=i;
+     }
+     return 0;
+ }
+    
+      
