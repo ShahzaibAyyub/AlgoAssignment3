@@ -1,27 +1,17 @@
 #include <iostream>
 using namespace std;
 int main() {
-  
-  char text[8] = {'F','E','D','A','B','A','B','C'};
-  char pattern[4] = {'F','E','B','A'}
   int t=8, p=4;
-  
-  for (int i=0 ; i<t-p ; i++) {
-    
-    for (int j=0 ; j<m ; j++) {
-      
-      if (text[i+j] != pattern[j]) {break;}
-      
-      else if (j==0) s++;
-      
-      else if (j==p) {
-        i+=n;
-        cout<<"Match Found";
-      }
-      
-      else {s+=1;}
-    }
-    return 0;
+  char text[8] = {'F','E','D','A','B','A','B','C'};
+  char pattern[4] = {'F','E','B','A'};
+  for (int i = 0 ; i < t-p ; i++) {
+      int j=0;
+      for (j = 0 ; j < p ; j++) {if (text[i+j] != pattern[j]) {break;}}
+      if (j==0) {s++;}
+      else if (j==p) {i+=n; cout<<"Pattern exists in given text";}
+      else {i+=1;}
+  }
+  return 0;
 }
      
     
